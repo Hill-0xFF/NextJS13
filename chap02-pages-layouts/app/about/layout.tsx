@@ -1,17 +1,12 @@
-import './globals.css'
+import '../globals.css';
 
-const layout = ({
-  children,
-}: {
-  children: React.ReactNode
-}) => {
+const layout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div>
-      {
-        children
-      }
-    </div>
-  )
-}
+    <>
+      <nav>About NavBar</nav>
+      <main>{children}</main>
+    </>
+  );
+};
 
-export default layout
+export default layout;
