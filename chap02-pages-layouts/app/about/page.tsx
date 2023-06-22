@@ -8,6 +8,7 @@ export const metadata: Metadata = {
 }
 
 export default function About() {
+  throw new Error('Not today my friend!!! =D')
   return (
     <div className={styles.divAbout}>
     <h1>About Page</h1>
