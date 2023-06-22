@@ -9,7 +9,7 @@ export default function Home() {
     <main className={styles.main}>
       <h1>Hello NextJS 13 !!!</h1>
       <p>This is just the beginning!!!</p>
-      <p>Now fast refresh.... it's fast!</p>
+      <p>Now fast refresh.... it&lsquos fast!</p>
     </main>
   )
 }
