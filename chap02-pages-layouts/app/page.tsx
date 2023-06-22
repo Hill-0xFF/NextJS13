@@ -1,9 +1,15 @@
 import Image from 'next/image'
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Inter } from '@next/font/google'
 import styles from './page.module.css'
 
 const inter = Inter({ subsets: ['latin'] })
+
+export const metadata: Metadata = {
+  title: 'Home Page.tsx',
+  description: 'Welcome to basic Next.js',
+}
 
 export default function Home() {
   return (
