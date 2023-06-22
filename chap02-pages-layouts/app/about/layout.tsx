@@ -1,9 +1,9 @@
-import '../globals.css';
+import styles from './page.module.css'
 
 const layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
-      <nav>About NavBar</nav>
+      <nav className={styles.navAbout}>About NavBar</nav>
       <main>{children}</main>
     </>
   );
