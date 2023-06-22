@@ -5,6 +5,7 @@
   align-items: center;
   padding: 6rem;
   min-height: 100vh;
+  border: solid 5px grey;
 }
 
 .description {
@@ -16,6 +17,7 @@
   width: 100%;
   z-index: 2;
   font-family: var(--font-mono);
+  border: solid 5px grey;
 }
 
 .description a {
@@ -41,9 +43,11 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(33%, auto));
+  grid-template-columns: repeat(2, minmax(33%, auto));
   width: var(--max-width);
   max-width: 100%;
+  border: solid 5px whitesmoke;
+  padding: 5px;
 }
 
 .card {
@@ -52,6 +56,8 @@
   background: rgba(var(--card-rgb), 0);
   border: 1px solid rgba(var(--card-border-rgb), 0);
   transition: background 200ms, border 200ms;
+  border: solid 5px grey;
+  margin: 1px;
 }
 
 .card span {
@@ -78,6 +84,7 @@
   align-items: center;
   position: relative;
   padding: 4rem 0;
+  border: solid 1rem red;
 }
 
 .center::before {
@@ -132,7 +139,7 @@
 
 /* Conic Gradient Animation */
 .thirteen::before {
-  animation: 6s rotate linear infinite;
+  animation: 1s rotate linear infinite;
   width: 200%;
   height: 200%;
   background: var(--tile-border);
