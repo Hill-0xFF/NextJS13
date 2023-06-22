@@ -19,3 +19,10 @@ interface IUsersData {
     bs: string
   }
 }
+
+interface IPostData {
+  userId: number,
+  id: number,
+  title: string,
+  body: string
+}
