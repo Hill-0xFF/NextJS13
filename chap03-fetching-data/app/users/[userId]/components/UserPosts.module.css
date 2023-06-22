@@ -1,0 +1,56 @@
+.article {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 10px;
+  margin-left: 16px;
+  transform: translateZ(0);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: 0px 2px 8px -1px #0000001a;
+}
+
+/*
+.thirteen::before,
+.thirteen::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+*/
+
+.article::before,
+.article::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+
+.article::before {
+  animation: 3s rotate linear infinite;
+  width: 100%;
+  height: 100%;
+  background: #113399;
+}
+
+.article::after {
+  inset: 0;
+  padding: 1px;
+  border-radius: #11cd33;
+  background: linear-gradient(
+    to bottom left,
+    rgba(112, 23, 45, 1),
+    rgba(45, 16,118, 1)
+    );
+  background-clip: content-box;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
