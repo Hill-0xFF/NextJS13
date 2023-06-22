@@ -16,3 +16,18 @@
   align-items: center;
   padding: 6rem;
 }
+
+.h1Loading {
+  display: flex;
+  flex-flow: column wrap;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  min-width: fit-content;
+  min-height: 100px;
+  padding: 5rem;
+  color: red;
+  font-size: 1.65rem;
+  border-radius: 1rem;
+  border: solid green 1rem;
+}
