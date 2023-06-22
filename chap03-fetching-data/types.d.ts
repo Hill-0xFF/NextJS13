@@ -1,4 +1,4 @@
-interface IUsersData {
+type T_UsersData = {
   id: number,
   name: string,
   email: string,

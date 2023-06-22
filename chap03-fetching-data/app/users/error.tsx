@@ -1,3 +1,5 @@
+'use client';
+
 import { useEffect } from 'react'
 import type { Metadata } from "next"
 import Link from "next/link"
@@ -20,11 +22,11 @@ export default function Error({
   useEffect(() => {
     console.error(error);
     
-  },[error])
+  }, [error])
   return (
     <div className={style.main}>
       <h2>Something went wrong on /users</h2>
-      <button onClick={() => reset()}></button>
+      <button onClick={() => reset()}>Try Again</button>
     </div>
   )
 }
