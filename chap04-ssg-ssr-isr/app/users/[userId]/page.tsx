@@ -4,6 +4,8 @@ import { Suspense } from 'react';
 import UserPosts from './components/UserPosts';
 import getUser from '../../lib/getUser';
 import getUserPosts from '../../lib/getUserPosts'
+import getAllUsers from '@/app/lib/getAllUsers';
+
 
 const metadata: Metadata = {
   title: 'User Posts',
@@ -57,4 +59,15 @@ export default async function UserPage({ params: { userId } }: Params) {
   );
 
   return content;
+}
+
+export async function generateStaticParams() {
+  const usersData: Promise<IUsersData[]> = getAllUsers()
+  const users = await usersData
+
+  return users.map( user => (
+    {
+      userId: user.id.toString()
+    }
+  ))
 }
