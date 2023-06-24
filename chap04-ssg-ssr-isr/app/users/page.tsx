@@ -17,7 +17,7 @@ export default async function Users() {
   const content = (
     <section className={style.main}>
       <h2>
-        <Link href="/">Back to Home</Link>
+        <Link href="/">Back To Home</Link>
       </h2>
       <br />
       {users.map((user) => {
@@ -34,7 +34,7 @@ export default async function Users() {
       })}
       <br />
       <h2>
-        <Link href="/">Back to Home</Link>
+        <Link href="/">Back To Home</Link>
       </h2>
     </section>
   );
