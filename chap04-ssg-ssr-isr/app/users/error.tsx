@@ -25,7 +25,7 @@ export default function Error({
   }, [error])
   return (
     <div className={style.main}>
-      <h2>Something went wrong on /users</h2>
+      <h2>Something went wrong on /users/</h2>
       <button onClick={() => reset()}>Try Again</button>
     </div>
   )

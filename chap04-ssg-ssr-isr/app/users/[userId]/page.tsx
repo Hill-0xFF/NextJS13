@@ -5,12 +5,7 @@ import UserPosts from './components/UserPosts';
 import getUser from '../../lib/getUser';
 import getUserPosts from '../../lib/getUserPosts'
 import getAllUsers from '@/app/lib/getAllUsers';
-import { notFound } from 'next/navigation'
-
-const metadata: Metadata = {
-  title: 'User Posts',
-  description: 'All user posts from typicode.'
-}
+import { notFound } from 'next/navigation';
 
 interface Params {
   params: {
@@ -25,10 +20,9 @@ export const generateMetadata = async ({
 }: Params):Promise<Metadata> => {
   const userData: Promise<IUsersData> = getUser(userId)
   const user = await userData
-  if (!user.name) {
+  if (!user) {
     return {
-      title: 'User Not Found',
-      description: `This is the page of ${user.name}`
+      title: 'User Not Found'
     }
   }
   return {
@@ -46,11 +40,12 @@ export default async function UserPage({ params: { userId } }: Params) {
   //   userPostsData
   // ])
   const user = await userData
+  if (!user.name) notFound()
 
   const content = (
     <section>
       <h2>
-        <Link href="/">{user.name}</Link>
+       {user.name}
         <br />
         <Link href='/'>Go to Homepage</Link>
       </h2>
