@@ -40,7 +40,11 @@ export default async function UserPage({ params: { userId } }: Params) {
   //   userPostsData
   // ])
   const user = await userData
-  if (!user.name) return notFound()
+  // this will return the users/ error page
+  // if (!user.name) return notFound()
+
+  // this will return the users/:id error page
+  if (!user) return notFound()
 
   const content = (
     <section>
