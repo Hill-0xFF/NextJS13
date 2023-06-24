@@ -40,7 +40,7 @@ export default async function UserPage({ params: { userId } }: Params) {
   //   userPostsData
   // ])
   const user = await userData
-  if (!user.name) notFound()
+  if (!user.name) return notFound()
 
   const content = (
     <section>
