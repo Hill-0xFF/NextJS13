@@ -5,7 +5,7 @@ import UserPosts from './components/UserPosts';
 import getUser from '../../lib/getUser';
 import getUserPosts from '../../lib/getUserPosts'
 import getAllUsers from '@/app/lib/getAllUsers';
-
+import { notFound } from 'next/navigation'
 
 const metadata: Metadata = {
   title: 'User Posts',
@@ -25,6 +25,12 @@ export const generateMetadata = async ({
 }: Params):Promise<Metadata> => {
   const userData: Promise<IUsersData> = getUser(userId)
   const user = await userData
+  if (!user.name) {
+    return {
+      title: 'User Not Found',
+      description: `This is the page of ${user.name}`
+    }
+  }
   return {
     title: user.name,
     description: `Page of ${user.name}`,
@@ -64,7 +70,7 @@ export default async function UserPage({ params: { userId } }: Params) {
 export async function generateStaticParams() {
   const usersData: Promise<IUsersData[]> = getAllUsers()
   const users = await usersData
-
+  
   return users.map( user => (
     {
       userId: user.id.toString()
