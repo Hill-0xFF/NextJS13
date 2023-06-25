@@ -12,8 +12,7 @@ export const metadata: Metadata = {
 export default async function Users() {
   const usersData: Promise<IUsersData[]> = getAllUsers();
   const users = await usersData;
-  console.log('Hello this is a server component!!!');
-
+  
   const content = (
     <section className={style.main}>
       <h2>
