@@ -27,7 +27,7 @@ export const generateMetadata = async ({
   }
   return {
     title: user.name,
-    description: `Page of ${user.name}`,
+    description: `Page of ${user.name}.`,
   }
 }
 
